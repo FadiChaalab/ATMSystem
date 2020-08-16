@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="700.0" style="-fx-background-position: center; -fx-background-color: #13163B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AtmController">
+   <children>
+      <FontAwesomeIcon id="Btn" fx:id="btnclose" accessibleRole="BUTTON" fill="#1c3c89" glyphName="CLOSE" layoutX="671.0" layoutY="29.0" onMouseClicked="#btnClose" selectionFill="#1c3c89" size="1.5em">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIcon>
+      <FontAwesomeIcon id="Btn" fx:id="btnminimize" accessibleRole="BUTTON" fill="#1c3c89" glyphName="MINUS" layoutX="648.0" layoutY="34.0" onMouseClicked="#btnMinimize" selectionFill="#1c3c89" size="1.5em">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIcon>
+      <VBox layoutX="75.0" layoutY="95.0" prefHeight="580.0" prefWidth="550.0" style="-fx-border-color: #161A47;">
+         <children>
+            <AnchorPane prefHeight="80.0" prefWidth="550.0" style="-fx-background-color: #161A47;">
+               <children>
+                  <Label layoutX="189.0" layoutY="30.0" text="Smart ATM System " textFill="WHITE">
+                     <font>
+                        <Font name="Arial Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIcon id="Btn" fx:id="btnprofile" accessibleRole="BUTTON" fill="#1c3c89" glyphName="USER" layoutX="25.0" layoutY="45.0" onMouseClicked="#btnProfile" selectionFill="#1c3c89" size="1.5em">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></FontAwesomeIcon>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="501.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../resources/recording.gif" />
+                     </image>
+                  </ImageView>
+               </children></AnchorPane>
+            <AnchorPane prefHeight="240.0" prefWidth="550.0">
+               <children>
+                  <AnchorPane layoutX="119.0" layoutY="20.0" prefHeight="200.0" prefWidth="320.0" style="-fx-background-color: #161A47;">
+                     <children>
+                        <AnchorPane layoutY="160.0" prefHeight="40.0" prefWidth="320.0">
+                           <children>
+                              <TextField id="txt" fx:id="card" layoutX="60.0" layoutY="5.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #13163B;" stylesheets="@application.css" />
+                              <FontAwesomeIcon id="Btn" accessibleRole="BUTTON" fill="#1c3c89" glyphName="CREDIT_CARD" layoutX="28.0" layoutY="26.0" onMouseClicked="#btnProfile" selectionFill="#1c3c89" size="1.5em">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </FontAwesomeIcon>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="160.0" prefWidth="320.0">
+                           <children>
+                              <AnchorPane fx:id="transfer_pn" prefHeight="160.0" prefWidth="320.0">
+                                 <children>
+                                    <Label layoutX="122.0" layoutY="23.0" text="Transfer" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="txt" fx:id="reciever" layoutX="60.0" layoutY="65.0" prefHeight="30.0" prefWidth="200.0" promptText="reciever email..." style="-fx-background-color: #13163B;" stylesheets="@application.css" />
+                                    <TextField id="txt" fx:id="amountsend" layoutX="60.0" layoutY="108.0" prefHeight="30.0" prefWidth="200.0" promptText="amount..." style="-fx-background-color: #13163B;" stylesheets="@application.css" />
+                                    <FontAwesomeIcon id="Btn" accessibleRole="BUTTON" fill="#1c3c89" glyphName="ENVELOPE" layoutX="28.0" layoutY="84.0" onMouseClicked="#btnProfile" selectionFill="#1c3c89" size="1.5em">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </FontAwesomeIcon>
+                                    <FontAwesomeIcon id="Btn" accessibleRole="BUTTON" fill="#1c3c89" glyphName="MONEY" layoutX="28.0" layoutY="129.0" onMouseClicked="#btnProfile" selectionFill="#1c3c89" size="1.5em">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </FontAwesomeIcon>
+                                    <FontAwesomeIcon id="Btn" fx:id="BtnTransferSend" accessibleRole="BUTTON" fill="#3387ee" glyphName="SEND" layoutX="274.0" layoutY="129.0" onMouseClicked="#btnTransferSend" selectionFill="#3387ee" size="1.5em">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </FontAwesomeIcon>
+                                 </children></AnchorPane>
+                              <AnchorPane fx:id="draw_pn" prefHeight="160.0" prefWidth="320.0">
+                                 <children>
+                                    <Label layoutX="121.0" layoutY="22.0" text="WithDraw" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="txt" fx:id="amountdraw" layoutX="61.0" layoutY="65.0" prefHeight="30.0" prefWidth="200.0" promptText="amount..." style="-fx-background-color: #13163B;" stylesheets="@application.css" />
+                                    <FontAwesomeIcon id="Btn" accessibleRole="BUTTON" fill="#1c3c89" glyphName="MONEY" layoutX="28.0" layoutY="86.0" onMouseClicked="#btnProfile" selectionFill="#1c3c89" size="1.5em">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </FontAwesomeIcon>
+                                    <FontAwesomeIcon id="Btn" fx:id="BtnDrawSend" accessibleRole="BUTTON" fill="#3387ee" glyphName="SEND" layoutX="275.0" layoutY="86.0" onMouseClicked="#btnDrawSend" selectionFill="#3387ee" size="1.5em">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </FontAwesomeIcon>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="balance_pn" prefHeight="160.0" prefWidth="320.0">
+                                 <children>
+                                    <Label layoutX="127.0" layoutY="23.0" text="Balance" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="balanceamount" alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="70.0" prefHeight="21.0" prefWidth="285.0" textAlignment="CENTER" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children></AnchorPane>
+                              <AnchorPane fx:id="deposit_pn" prefHeight="160.0" prefWidth="320.0">
+                                 <children>
+                                    <Label layoutX="129.0" layoutY="24.0" text="Deposit" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="txt" fx:id="amountdeposit" layoutX="61.0" layoutY="65.0" prefHeight="30.0" prefWidth="200.0" promptText="amount..." style="-fx-background-color: #13163B;" stylesheets="@application.css" />
+                                    <FontAwesomeIcon id="Btn" accessibleRole="BUTTON" fill="#1c3c89" glyphName="MONEY" layoutX="28.0" layoutY="86.0" onMouseClicked="#btnProfile" selectionFill="#1c3c89" size="1.5em">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </FontAwesomeIcon>
+                                    <FontAwesomeIcon id="Btn" fx:id="BtnDepositSend" accessibleRole="BUTTON" fill="#3387ee" glyphName="SEND" layoutX="275.0" layoutY="86.0" onMouseClicked="#btnDepositSend" selectionFill="#3387ee" size="1.5em">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </FontAwesomeIcon>
+                                 </children></AnchorPane>
+                              <AnchorPane fx:id="pin_pn" prefHeight="160.0" prefWidth="320.0">
+                                 <children>
+                                    <TextField id="txt" fx:id="pin" layoutX="58.0" layoutY="64.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #13163B;" stylesheets="@application.css" />
+                                    <Label layoutX="121.0" layoutY="24.0" text="Pin Code" textFill="WHITE">
+                                       <font>
+                                          <Font name="Arial Italic" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <FontAwesomeIcon id="Btn" fx:id="BtnCheckPin" accessibleRole="BUTTON" fill="#3387ee" glyphName="SEND" layoutX="275.0" layoutY="86.0" onMouseClicked="#btnCheckPin" selectionFill="#3387ee" size="1.5em">
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </FontAwesomeIcon>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="video_pn" prefHeight="160.0" prefWidth="320.0">
+                                 <children>
+                                    <MediaView fx:id="videoView" fitHeight="160.0" fitWidth="320.0" preserveRatio="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                    </MediaView>
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                     </children></AnchorPane>
+                  <Button fx:id="BtnBalanceSwitcher" contentDisplay="CENTER" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#btnBalanceSwitcher" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #1A2980, #26D0CE);" styleClass="btns" stylesheets="@application.css" text="Balance" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="BtnDepositSwitcher" contentDisplay="CENTER" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#btnDepositSwitcher" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #1A2980, #26D0CE);" styleClass="btns" stylesheets="@application.css" text="Deposit" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="BtnTransferSwitcher" contentDisplay="CENTER" layoutX="458.0" layoutY="105.0" mnemonicParsing="false" onMouseClicked="#btnTransferSwitcher" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #1A2980, #26D0CE);" styleClass="btns" stylesheets="@application.css" text="Transfer" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <Button fx:id="BtnDrawSwitcher" contentDisplay="CENTER" layoutX="458.0" layoutY="41.0" mnemonicParsing="false" onMouseClicked="#btnDrawSwitcher" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #1A2980, #26D0CE);" styleClass="btns" stylesheets="@application.css" text="WithDraw" textAlignment="CENTER" textFill="WHITE">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="262.0" prefWidth="548.0">
+               <children>
+                  <AnchorPane layoutX="118.0" layoutY="30.0" prefHeight="200.0" prefWidth="190.0" style="-fx-background-color: #161A47;">
+                     <children>
+                        <ImageView fx:id="btn1" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="16.0" layoutY="28.0" onMouseClicked="#btnNumbers" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/1.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="btn2" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="56.0" layoutY="28.0" onMouseClicked="#btnNumbers" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/2.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="btn3" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="96.0" layoutY="28.0" onMouseClicked="#btnNumbers" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/3.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="btn4" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="16.0" layoutY="68.0" onMouseClicked="#btnNumbers" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/4.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="btn5" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="56.0" layoutY="68.0" onMouseClicked="#btnNumbers" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/5.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="btn6" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="96.0" layoutY="68.0" onMouseClicked="#btnNumbers" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/6.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="btn7" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="16.0" layoutY="108.0" onMouseClicked="#btnNumbers" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/7.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="btn8" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="56.0" layoutY="108.0" onMouseClicked="#btnNumbers" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/8.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="btn9" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="96.0" layoutY="108.0" onMouseClicked="#btnNumbers" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/9.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="16.0" layoutY="148.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/blank.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="btn0" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="56.0" layoutY="148.0" onMouseClicked="#btnNumbers" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/0.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="96.0" layoutY="148.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/blank.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="cancel" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="145.0" layoutY="28.0" onMouseClicked="#btnCancel" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/cancel.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="clear" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="145.0" layoutY="68.0" onMouseClicked="#btnClear" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/clear.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                        <ImageView fx:id="enter" accessibleRole="BUTTON" fitHeight="25.0" fitWidth="30.0" layoutX="145.0" layoutY="108.0" onMouseClicked="#btnEnter" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../resources/enter.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <effect>
+                              <DropShadow height="5.0" radius="2.0" spread="1.0" width="5.0" />
+                           </effect>
+                        </ImageView>
+                     </children></AnchorPane>
+                  <AnchorPane layoutX="318.0" layoutY="31.0" prefHeight="150.0" prefWidth="125.0">
+                     <children>
+                        <AnchorPane prefHeight="190.0" prefWidth="125.0">
+                           <children>
+                              <AnchorPane fx:id="remove_pn" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <ImageView fitHeight="200.0" fitWidth="125.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../../resources/remove.gif" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="insert_pn" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <ImageView fitHeight="200.0" fitWidth="125.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../../resources/insert.gif" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="none_pn" prefHeight="200.0" prefWidth="125.0">
+                                 <children>
+                                    <ImageView fitHeight="200.0" fitWidth="125.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../../resources/insert%20.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children></AnchorPane>
+                  <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="490.0" layoutY="171.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../resources/voice.gif" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

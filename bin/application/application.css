@@ -1,0 +1,27 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#txt:focused{
+	-fx-background-color:white;
+    -fx-text-fill:white;
+}
+#txt{
+	-fx-text-fill:white;
+}
+.btns:hover{
+	-fx-background-color: linear-gradient(to right, #ff0084, #33001b);
+}
+#BtnLogin:hover{
+	-fx-background-color: linear-gradient(to right, #23A5BA, #1C3C89);
+}
+#combo .list-cell{
+	-fx-background-color: #161A47;
+	-fx-text-fill:white;
+}
+#combo .combo-box-popup .list-cell:selected{
+-fx-background-color:#1C3C89; 
+}
+#combo .list-cell:hover{
+-fx-background-color:#1C3C99; 
+}
+#date .text-field{
+	-fx-control-inner-background:#161A47;
+}

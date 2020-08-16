@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-position: center; -fx-background-color: #13163B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.InfoController">
+   <children>
+      <FontAwesomeIcon id="Btn" fx:id="btnclose" accessibleRole="BUTTON" fill="#1c3c89" glyphName="CLOSE" layoutX="771.0" layoutY="26.0" onMouseClicked="#btnClose" selectionFill="#1c3c89" size="1.5em">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></FontAwesomeIcon>
+      <FontAwesomeIcon id="Btn" fx:id="btnminimize" accessibleRole="BUTTON" fill="#1c3c89" glyphName="MINUS" layoutX="749.0" layoutY="30.0" onMouseClicked="#btnMinimize" selectionFill="#1c3c89" size="1.5em">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+     </FontAwesomeIcon>
+      <Label layoutX="346.0" layoutY="80.0" text="Almost Done!" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="pic" accessibleRole="BUTTON" fitHeight="80.0" fitWidth="80.0" layoutX="115.0" layoutY="180.0" onMouseClicked="#btnGetPic" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/Default-user.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="115.0" layoutY="290.0" text="username:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="115.0" layoutY="323.0" text="email:" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="usrinfo" layoutX="195.0" layoutY="292.0" text="" textAlignment="CENTER" textFill="#cacaca">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="emailinfo" layoutX="170.0" layoutY="323.0" text="" textAlignment="CENTER" textFill="#cacaca">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <TextField id="txt" fx:id="phone" layoutX="115.0" layoutY="365.0" prefHeight="30.0" prefWidth="220.0" promptText="phone..." style="-fx-background-color: #161A47;" stylesheets="@application.css">
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TextField>
+                  <FontAwesomeIcon fill="#1c3c89" glyphName="PHONE" layoutX="85.0" layoutY="390.0" selectionFill="#1c3c89" size="1.5em" />
+      <TextField id="txt" fx:id="location" layoutX="115.0" layoutY="415.0" prefHeight="30.0" prefWidth="220.0" promptText="location..." style="-fx-background-color: #161A47;" stylesheets="@application.css">
+         <effect>
+            <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+         </effect>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <FontAwesomeIcon fill="#1c3c89" glyphName="MAP_MARKER" layoutX="85.0" layoutY="435.0" selectionFill="#1c3c89" size="1.5em" />
+      <TextField id="txt" fx:id="job" layoutX="115.0" layoutY="460.0" prefHeight="30.0" prefWidth="220.0" promptText="job..." style="-fx-background-color: #161A47;" stylesheets="@application.css">
+         <effect>
+            <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+         </effect>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <FontAwesomeIcon fill="#1c3c89" glyphName="BRIEFCASE" layoutX="85.0" layoutY="480.0" selectionFill="#1c3c89" size="1.5em" />
+      <TextField id="txt" fx:id="amount" layoutX="529.0" layoutY="414.0" prefHeight="30.0" prefWidth="220.0" promptText="amount..." style="-fx-background-color: #161A47;" stylesheets="@application.css">
+         <effect>
+            <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+         </effect>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </TextField>
+      <FontAwesomeIcon fill="#1c3c89" glyphName="MONEY" layoutX="499.0" layoutY="439.0" selectionFill="#1c3c89" size="1.5em" />
+      <FontAwesomeIcon fill="#1c3c89" glyphName="VENUS_MARS" layoutX="499.0" layoutY="390.0" selectionFill="#1c3c89" size="1.5em" />
+      <ComboBox id="combo" fx:id="gender" layoutX="529.0" layoutY="369.0" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #161A47;" stylesheets="@application.css">
+         <effect>
+            <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
+      <Label layoutX="302.0" layoutY="115.0" text="Complete your information here" textAlignment="CENTER" textFill="#cacaca">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font>
+      </Label>
+      <Button id="BtnLogin" fx:id="btnsaveandexit" alignment="CENTER" contentDisplay="CENTER" layoutX="316.0" layoutY="528.0" mnemonicParsing="false" onMouseClicked="#btnSaveAndExit" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: linear-gradient(to right, #1C3C89, #23A5BA);" stylesheets="@application.css" text="Save and exit" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+         </effect>
+      </Button>
+      <ImageView accessibleRole="BUTTON" fitHeight="140.0" fitWidth="140.0" layoutX="609.0" layoutY="150.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../resources/s1.png" />
+         </image>
+      </ImageView>
+      <DatePicker id="date" fx:id="birth" layoutX="529.0" layoutY="324.0" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: #161A47;" stylesheets="@application.css" />
+      <FontAwesomeIcon fill="#1c3c89" glyphName="CALENDAR" layoutX="499.0" layoutY="345.0" selectionFill="#1c3c89" size="1.5em" />
+   </children>
+</AnchorPane>

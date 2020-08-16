@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1020.0" style="-fx-background-position: center; -fx-background-color: #13163B;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <AnchorPane layoutX="181.0">
+         <children>
+            <AnchorPane id="signupPanel" fx:id="signup_pn" prefHeight="500.0" prefWidth="457.0">
+               <children>
+                  <Label id="welcome" layoutX="181.0" layoutY="120.0" text="SignUp Now" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField id="txt" fx:id="usr2" layoutX="117.0" layoutY="180.0" prefHeight="30.0" prefWidth="220.0" promptText="username..." style="-fx-background-color: #161A47;" stylesheets="@application.css">
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TextField>
+                  <FontAwesomeIcon fill="#1c3c89" glyphName="USER" layoutX="82.0" layoutY="205.0" selectionFill="#1c3c89" size="1.5em" />
+                  <FontAwesomeIcon fill="#1c3c89" glyphName="KEY" layoutX="80.0" layoutY="325.0" selectionFill="#1c3c89" size="1.5em" />
+                  <PasswordField id="txt" fx:id="pwd2" layoutX="117.0" layoutY="300.0" prefHeight="30.0" prefWidth="220.0" promptText="password..." style="-fx-background-color: #161A47;" stylesheets="@application.css">
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </PasswordField>
+                  <Button id="BtnLogin" fx:id="btnsignup" contentDisplay="CENTER" layoutX="117.0" layoutY="400.0" mnemonicParsing="false" onMouseClicked="#btnSignup" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: linear-gradient(to right, #1C3C89, #23A5BA);" stylesheets="@application.css" text="Signup" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <TextField id="txt" fx:id="email" layoutX="117.0" layoutY="240.0" prefHeight="30.0" prefWidth="220.0" promptText="email..." style="-fx-background-color: #161A47;" stylesheets="@application.css">
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TextField>
+                  <FontAwesomeIcon fill="#1c3c89" glyphName="ENVELOPE" layoutX="82.0" layoutY="264.0" selectionFill="#1c3c89" size="1.5em" />
+                  <CheckBox fx:id="accept" layoutX="117.0" layoutY="360.0" mnemonicParsing="false" text="I agree to the terms of service" textFill="#cacaca" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="loginPanel" fx:id="login_pn" prefHeight="500.0" prefWidth="453.0">
+               <children>
+                  <PasswordField id="txt" fx:id="pwd" layoutX="117.0" layoutY="240.0" prefHeight="30.0" prefWidth="220.0" promptText="password..." style="-fx-background-color: #161A47;" stylesheets="@application.css">
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </PasswordField>
+                  <Label id="welcome" layoutX="180.0" layoutY="120.0" text="Login Now" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField id="txt" fx:id="usr" layoutX="117.0" layoutY="180.0" prefHeight="30.0" prefWidth="220.0" promptText="email..." style="-fx-background-color: #161A47;" stylesheets="@application.css">
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                  </TextField>
+                  <FontAwesomeIcon fill="#1c3c89" glyphName="USER" layoutX="82.0" layoutY="205.0" selectionFill="#1c3c89" size="1.5em" />
+                  <FontAwesomeIcon fill="#1c3c89" glyphName="KEY" layoutX="82.0" layoutY="265.0" selectionFill="#1c3c89" size="1.5em" />
+                  <Button id="BtnLogin" fx:id="btnlogin" contentDisplay="CENTER" layoutX="117.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#btnLogin" prefHeight="30.0" prefWidth="220.0" style="-fx-background-color: linear-gradient(to right, #1C3C89, #23A5BA);" stylesheets="@application.css" text="Login" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+                     </effect>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="634.0" prefHeight="500.0" prefWidth="380.0" style="-fx-background-color: #13163B;">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="240.0" layoutX="126.0" layoutY="292.0" opacity="0.8" pickOnBounds="true">
+               <image>
+                  <Image url="@../../resources/s2.png" />
+               </image>
+            </ImageView>
+            <Label id="welcome" layoutX="51.0" layoutY="128.0" text="Welcome to the intelligence ATM" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Emoji" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="110.0" fitWidth="132.0" layoutX="92.0" layoutY="276.0" opacity="0.8" pickOnBounds="true">
+               <image>
+                  <Image url="@../../resources/voice.gif" />
+               </image>
+            </ImageView>
+            <Label id="welcome" contentDisplay="CENTER" layoutX="58.0" layoutY="149.0" prefHeight="101.0" prefWidth="265.0" text="Convenience and Safety, Instant Access to Direct Deposit Funds, Complete ATM functions including Funds Withdrawal, Account Balance, Funds Transfer." textAlignment="CENTER" textFill="#cacaca" wrapText="true">
+               <font>
+                  <Font name="Segoe UI Emoji" size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIcon id="Btn" fx:id="btnclose" accessibleRole="BUTTON" fill="#1c3c89" glyphName="CLOSE" layoutX="359.0" layoutY="24.0" onMouseClicked="#btnClose" selectionFill="#1c3c89" size="1.5em">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIcon>
+            <FontAwesomeIcon id="Btn" fx:id="btnminimize" accessibleRole="BUTTON" fill="#1c3c89" glyphName="MINUS" layoutX="335.0" layoutY="30.0" onMouseClicked="#btnMinimize" selectionFill="#1c3c89" size="1.5em">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></FontAwesomeIcon>
+         </children>
+      </AnchorPane>
+      <Button fx:id="BtnLoginSwitcher" contentDisplay="CENTER" layoutX="-13.0" layoutY="85.0" mnemonicParsing="false" onMouseClicked="#btnLoginSwitcher" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #33001b, #ff0084);" styleClass="btns" stylesheets="@application.css" text="Login" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+         </effect>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="BtnSignupSwitcher" contentDisplay="CENTER" layoutX="-13.0" layoutY="130.0" mnemonicParsing="false" onMouseClicked="#btnSignupSwitcher" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #33001b, #ff0084);" styleClass="btns" stylesheets="@application.css" text="Signup" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+         </effect>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="BtnResetSwitcher" contentDisplay="CENTER" layoutX="-13.0" layoutY="175.0" mnemonicParsing="false" onMouseClicked="#btnResetSwitcher" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(to right, #1A2980, #26D0CE);" styleClass="btns" stylesheets="@application.css" text="Reset" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+         </effect>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+   <effect>
+      <DropShadow height="4.0" radius="1.5" spread="1.0" width="4.0" />
+   </effect>
+</AnchorPane>
